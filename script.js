@@ -1,3 +1,22 @@
+// ===== PAGE LOADER =====
+document.body.classList.add('loading');
+const loaderProgress = document.getElementById('loaderProgress');
+const pageLoader = document.getElementById('pageLoader');
+
+let loadPercent = 0;
+const loaderInterval = setInterval(() => {
+  loadPercent += Math.random() * 15 + 5;
+  if (loadPercent > 100) loadPercent = 100;
+  loaderProgress.style.width = loadPercent + '%';
+  if (loadPercent >= 100) {
+    clearInterval(loaderInterval);
+    setTimeout(() => {
+      pageLoader.classList.add('hidden');
+      document.body.classList.remove('loading');
+    }, 400);
+  }
+}, 200);
+
 // ===== PARTICLE SYSTEM =====
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
