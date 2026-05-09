@@ -383,24 +383,24 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal reveal-right" id="contact-form">
+                <form class="contact-form reveal reveal-right" id="contact-form" action="https://formspree.io/f/xpqboalk" method="POST">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder=" " required>
+                        <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name">Your Name</label>
                         <span class="form-line"></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder=" " required>
+                        <input type="email" id="email" name="email" placeholder=" " required>
                         <label for="email">Your Email</label>
                         <span class="form-line"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" placeholder=" " required>
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
                         <label for="subject">Subject</label>
                         <span class="form-line"></span>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="5" placeholder=" " required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
                         <label for="message">Your Message</label>
                         <span class="form-line"></span>
                     </div>

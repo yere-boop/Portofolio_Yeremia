@@ -231,9 +231,43 @@ document.getElementById('back-to-top').addEventListener('click', () => {
 });
 
 // ===== CONTACT FORM =====
-document.getElementById('contact-form').addEventListener('submit', (e) => {
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit span');
-  btn.textContent = 'Message Sent! ✓';
-  setTimeout(() => { btn.textContent = 'Send Message'; e.target.reset(); }, 3000);
+  const btn = e.target.querySelector('.btn-submit');
+  const btnText = btn.querySelector('span');
+  const originalText = btnText.textContent;
+
+  // Feedback state
+  btnText.textContent = 'Sending...';
+  btn.style.opacity = '0.7';
+  btn.style.pointerEvents = 'none';
+
+  const formData = new FormData(e.target);
+
+  try {
+    const response = await fetch(e.target.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      btnText.textContent = 'Message Sent! ✓';
+      btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+      e.target.reset();
+    } else {
+      throw new Error();
+    }
+  } catch (error) {
+    btnText.textContent = 'Error! Try Again';
+    btn.style.background = '#ef4444';
+  } finally {
+    setTimeout(() => {
+      btnText.textContent = originalText;
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+      btn.style.background = ''; // reset to CSS default
+    }, 4000);
+  }
 });
