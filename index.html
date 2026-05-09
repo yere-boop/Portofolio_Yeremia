@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeremia Milano Mawuntu — Portfolio</title>
+    <meta name="description"
+        content="Portfolio personal Yeremia Milano Mawuntu. Web Developer, Sports Enthusiast, Lifelong Learner.">
+    <meta property="og:title" content="Yeremia Milano Mawuntu — Portfolio">
+    <meta property="og:description" content="Web Developer, Sports Enthusiast, Lifelong Learner.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Noise & Aurora Background -->
+    <div class="noise-overlay"></div>
+    <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>YM<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Yeremia Milano</span>
+                <span class="hero-lastname">Mawuntu</span>
+            </h1>
+            <div class="hero-typing">
+                <span class="typing-prefix">I'm a </span>
+                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Passionate about technology, sports, and exploring the unknown.
+                I believe in continuous learning and pushing boundaries.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>+
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>+
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>%
+                    <span class="stat-label">Dedication</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-glow"></div>
+            <div class="hero-avatar">
+                <div class="avatar-ring"></div>
+                <div class="avatar-inner">
+                    <img src="profile-hero.jpg" alt="Yeremia Milano Mawuntu">
+                </div>
+            </div>
+            <div class="floating-icons">
+                <div class="floating-icon fi-1"><i class="fab fa-html5"></i></div>
+                <div class="floating-icon fi-2"><i class="fab fa-css3-alt"></i></div>
+                <div class="floating-icon fi-3"><i class="fab fa-js"></i></div>
+                <div class="floating-icon fi-4"><i class="fab fa-react"></i></div>
+                <div class="floating-icon fi-5"><i class="fab fa-python"></i></div>
+                <div class="floating-icon fi-6"><i class="fab fa-github"></i></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal reveal-left">
+                    <div class="about-img-wrapper">
+                        <div class="about-img-placeholder">
+                            <img src="profile.jpg" alt="Yeremia Milano Mawuntu">
+                        </div>
+                        <div class="about-img-border"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-icon"><i class="fas fa-fire"></i></span>
+                        <div>
+                            <span class="exp-title">Passionate</span>
+                            <span class="exp-sub">Learner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal reveal-right">
+                    <h3 class="about-subtitle">Curious Mind, Active Body</h3>
+                    <p class="about-text">
+                        Hello! I'm <strong>Yeremia Milano Mawuntu</strong>, a curious individual who
+                        thrives on learning new things and staying active through sports. I believe that
+                        the combination of physical fitness and intellectual curiosity creates the perfect
+                        foundation for personal growth.
+                    </p>
+                    <p class="about-text">
+                        My journey in technology started from a genuine desire to understand how things
+                        work. Whether it's building web applications, exploring new programming languages,
+                        or diving into unfamiliar territories — I'm always eager to expand my horizons.
+                    </p>
+                    <p class="about-text">
+                        When I'm not coding, you'll find me on the field playing sports, working out,
+                        or reading about the latest in tech. I believe in the philosophy of
+                        <em>"never stop learning, never stop growing."</em>
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <span class="info-label">Name</span>
+                                <span class="info-value">Yeremia Milano Mawuntu</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <div>
+                                <span class="info-label">Hobby</span>
+                                <span class="info-value">Sports & Learning</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="info-label">Languages</span>
+                                <span class="info-value">Indonesian, English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I Can Do</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal" style="--delay: 0.1s">
+                    <div class="skill-icon si-html"><i class="fab fa-html5"></i></div>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card reveal" style="--delay: 0.2s">
+                    <div class="skill-icon si-css"><i class="fab fa-css3-alt"></i></div>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card reveal" style="--delay: 0.3s">
+                    <div class="skill-icon si-js"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card reveal" style="--delay: 0.4s">
+                    <div class="skill-icon si-react"><i class="fab fa-react"></i></div>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card reveal" style="--delay: 0.5s">
+                    <div class="skill-icon si-python"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card reveal" style="--delay: 0.6s">
+                    <div class="skill-icon si-git"><i class="fab fa-git-alt"></i></div>
+                    <h3>Git</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Recent Work</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal" style="--delay: 0.1s">
+                    <div class="project-image">
+                        <div class="project-img-placeholder pi-1">
+                            <img src="project-acadconsult.png" alt="AcadConsult Preview">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AcadConsult</h3>
+                        <p>Academic consultation platform connecting students with lecturers for streamlined academic
+                            guidance.</p>
+                        <div class="project-tags">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="--delay: 0.2s">
+                    <div class="project-image">
+                        <div class="project-img-placeholder pi-2">
+                            <img src="project-taskmanager.png" alt="Task Manager Pro Preview">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager Pro</h3>
+                        <p>A sleek productivity app with drag-and-drop task management, analytics dashboard, and team
+                            collaboration.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="--delay: 0.3s">
+                    <div class="project-image">
+                        <div class="project-img-placeholder pi-3">
+                            <img src="project-fittracker.png" alt="FitTracker Preview">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="View Project"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FitTracker</h3>
+                        <p>Personal fitness tracking application with workout logging, progress charts, and goal setting
+                            features.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Chart.js</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal reveal-left">
+                    <h3>Let's work together!</h3>
+                    <p>Feel free to reach out if you want to collaborate, have a question, or just want to say hi 👋</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">yeremiamilanoyeremia@email.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/yeremia.mawuntu" target="_blank" class="social-link sl-fb"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/yeremiamilano" target="_blank" class="social-link sl-ig"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="social-link sl-gh" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank" class="social-link sl-li" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal reveal-right" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>YM<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-text">Designed & Built with <span class="heart">❤</span> by Yeremia Milano Mawuntu</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
