@@ -238,14 +238,21 @@ contactForm.addEventListener('submit', async (e) => {
   const btnText = btn.querySelector('span');
   const originalText = btnText.textContent;
 
+  // Form Data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
   // Feedback state
-  btnText.textContent = 'Sending...';
+  btnText.textContent = 'Sending to Email...';
   btn.style.opacity = '0.7';
   btn.style.pointerEvents = 'none';
 
   const formData = new FormData(e.target);
 
   try {
+    // 1. Send to Email (Formspree)
     const response = await fetch(e.target.action, {
       method: 'POST',
       body: formData,
@@ -253,9 +260,23 @@ contactForm.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
-      btnText.textContent = 'Message Sent! ✓';
+      btnText.textContent = 'Opening WhatsApp...';
       btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+
+      // 2. Prepare WhatsApp Message
+      const waNumber = "6283137435063";
+      const waMessage = `*Halo Yeremia! Ada pesan baru dari Portfolio*%0A%0A` +
+                        `*Nama:* ${name}%0A` +
+                        `*Email:* ${email}%0A` +
+                        `*Subjek:* ${subject}%0A` +
+                        `*Pesan:* ${message}`;
+      const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+
+      // Open WA in new tab
+      window.open(waUrl, '_blank');
+      
       e.target.reset();
+      btnText.textContent = 'Sent Successfully! ✓';
     } else {
       throw new Error();
     }
@@ -267,7 +288,7 @@ contactForm.addEventListener('submit', async (e) => {
       btnText.textContent = originalText;
       btn.style.opacity = '1';
       btn.style.pointerEvents = 'auto';
-      btn.style.background = ''; // reset to CSS default
+      btn.style.background = '';
     }, 4000);
   }
 });
