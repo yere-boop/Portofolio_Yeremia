@@ -533,10 +533,9 @@ body.loading { overflow: hidden; }
   padding: 20px;
 }
 .pi-church img {
-  width: auto !important;
-  height: 80% !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 .project-overlay {
   position: absolute; inset: 0; background: rgba(10,10,15,0.8);
