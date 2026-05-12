@@ -524,6 +524,7 @@ body.loading { overflow: hidden; }
 .pi-2 { background: linear-gradient(135deg, #134e4a, #115e59); color: #5eead4; }
 .pi-3 { background: linear-gradient(135deg, #4a1d96, #6d28d9); color: #c4b5fd; }
 .pi-4 { background: linear-gradient(135deg, #3e2723, #5d4037); color: #d7ccc8; }
+.pi-church { background: linear-gradient(135deg, #064e3b, #10b981); color: #ecfdf5; }
 .project-overlay {
   position: absolute; inset: 0; background: rgba(10,10,15,0.8);
   display: flex; align-items: center; justify-content: center; gap: 16px;
