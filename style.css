@@ -526,16 +526,13 @@ body.loading { overflow: hidden; }
 .pi-4 { background: linear-gradient(135deg, #3e2723, #5d4037); color: #d7ccc8; }
 .pi-church { 
   background: linear-gradient(135deg, #064e3b, #10b981); 
-  color: #ecfdf5; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  color: #ecfdf5;
 }
 .pi-church img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  object-position: center center !important;
 }
 .project-overlay {
   position: absolute; inset: 0; background: rgba(10,10,15,0.8);
